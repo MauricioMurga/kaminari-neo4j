@@ -1,6 +1,6 @@
-RSpec.describe Kaminari::Neo4j do
+RSpec.describe Kaminari::ActiveGraph do
   class MyThing
-    include Neo4j::ActiveNode
+    include ActiveGraph::Node
     property :a
     property :x
   end
@@ -9,9 +9,11 @@ RSpec.describe Kaminari::Neo4j do
   let(:current_page){ 2 }
   let(:per_page){ 3 }
 
-  subject { MyThing.page(current_page).per(per_page) }
+  subject { MyThing.all.page(current_page).per(per_page) }
 
   before do
+    # Database cleaner does not work
+    MyThing.destroy_all
     total_count.times { MyThing.create!(a: "foo", x: "bar") }
   end
 

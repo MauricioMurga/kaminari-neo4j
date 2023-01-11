@@ -1,5 +1,5 @@
 module Kaminari
-  module Neo4j
+  module ActiveGraph
     VERSION = '0.0.4'
   end
 end

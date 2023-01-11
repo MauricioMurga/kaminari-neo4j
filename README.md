@@ -1,4 +1,4 @@
-# Kaminari::Neo4j
+# Kaminari::ActiveGraph
 
 Adds [neo4j](https://github.com/neo4jrb/neo4j) support to [kaminari](https://github.com/amatsuda/kaminari).
 

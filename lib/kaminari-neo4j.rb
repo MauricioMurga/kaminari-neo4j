@@ -1,1 +1,1 @@
-require "kaminari/neo4j"
+require "kaminari/active_graph"
