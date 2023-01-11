@@ -19,6 +19,10 @@ module Kaminari
         self.per_page = (per_page || default_per_page).to_i
       end
 
+      def klass
+        self.source.model.to_s.constantize
+      end
+
       def total
         source.count
       end
